@@ -1,14 +1,12 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const cors = require('cors')
 const path = require('path');
+
 
 // Initialization
 
 
 const app = express()
-
-app.use(cors())
 app.use(express.json())
 
 
@@ -91,7 +89,7 @@ mongoose.connect('mongodb+srv://anees:anees7890@aneesmanzoor-kjrae.gcp.mongodb.n
 })
 // Listen
 
-const PORT =  45080;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT , ()=>{
     console.log('Server is Listening On Port : ' + PORT)
 })
