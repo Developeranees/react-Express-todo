@@ -84,7 +84,7 @@ app.put('/update_todo/:id',(req,res)=>{
 
 // Mongoose Connect
 
-mongoose.connect('mongodb+srv://anees:anees7890@aneesmanzoor-kjrae.gcp.mongodb.net/todo?retryWrites=true&w=majority',{useNewUrlParser : true , useUnifiedTopology: true ,'useFindAndModify': false}).then(()=>{
+mongoose.connect('mongodb://localhost:27017/todo',{useNewUrlParser : true , useUnifiedTopology: true ,'useFindAndModify': false}).then(()=>{
     console.log('DB Connected')
 })
 // Listen
